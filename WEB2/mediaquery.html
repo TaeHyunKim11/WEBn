@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chaarset="utf-8">
+        <title></title>
+        <style>
+            div{
+                border:10px solid green;
+                font-size:60px;
+            }
+            /* screen width > 800px == 최소한의 크기가 800px일 때*/
+            @media(min-width:800px/*화면의 크기가 800px이상일 때==최소한의 크기가 800px일 때*/){
+                div{
+                    display: none;
+                }
+            }
+            /*이렇게 Media Query를 이용해서 화면의 상태에 맞게 디자인을 할 수 있다 ▶ 반응형 디자인*/
+        </style>
+    </head>
+    <body>
+        <div>
+            Responsive
+        </div>
+    </body>
+</html>

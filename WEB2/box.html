@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            /*
+            block level element
+            */
+            h1,a/*중복의 제거*/{
+                /*
+                border-width: 5px;
+                border-color: red;
+                border-style: solid;*/
+                border:5px red solid;/*>중복의 제거, 위와 같은 내용*/
+                /*
+                display:inline; > block level을 inline level로 변경
+                */
+                /*display: none 으로하면 안보이게 됨*/
+                padding:5px;
+                margin: 20px;
+                display:block;
+                width:300px;
+            }
+            /*
+            inline level element
+            a{
+                border-width: 5px;
+                border-color: red;
+                border-style: solid;
+                display:block; > inline level을 block level로 변경
+            }
+            */
+        </style>
+    </head>
+    <body>
+        <h1>Alongside HTML</h1> and <a href="">CSS</a>
+        <h1>Alongside HTML</h1> and <a href="">CSS</a>
+    </body>
+</html>

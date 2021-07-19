@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            #grid{
+                border: 5px pink solid;
+                display:grid;
+                grid-template-columns: 150px 1fr;
+                /*fr: 화면 크기 비율에 따라 자동으로 조정되는 단위
+                
+                *Grid는 최신 기술
+                > 기술에 대한 사용성을 확인하려면
+                https://caniuse.com/?search=grid
+                을 확인
+                > 브라우저의 버전별 지원 정도를 나타냄, 전 세계 인구 중 어느 정도가 이 기술을 사용했을 때 이걸 이용할 수 있는지를 알려줌
+                >> 매우 중요&유용! 꼭 기억해두기!
+                */
+            }
+            div{
+                border: 5px gray solid;
+            }
+        </style>
+    </head>
+    <body>
+        <!--div, span 태그는 디자인 목적으로 어떤 의미도 존재하지 않는 태그
+            <div> tag : block level element
+            <span> tag : inline level element
+        -->
+        <div id="grid">
+            <div>NAVIGATION</div>
+            <div>ARTICLE</div>
+        </div>
+    </body>
+</html>
