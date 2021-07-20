@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+            body{
+                background-color:gray;
+            }
+        </style>
+    </head>
+    <body>
+        <!--
+            WEB2 JavaScript - 3.HTML과 JS의 만남 : script 태그
+        
+            JavaScript는 HTML위에서 동작 -> Script tag를 사용
+            HTML과 JavaScript가 다른 점: HTML은 그대로 출력(==정적), JavaScript는 계산도 가능(==동적)
+        -->
+        <h1>JavaScript</h1>
+        <script>
+            document.write("Hello World!");
+            document.write("<br><br>");
+            document.write(1+1)
+        </script>
+        <h1>JavaScript</h1>
+        <p>Hello World!</p>
+        <p>1+1</p>
+
+        <!--
+            WEB2 JavaScript - 4.HTML과 JS의 만남 : 이벤트
+            
+            Button을 클릭했을 때 알림 이벤트 발생 시키기
+            *HTML에 약속: onclick 속성의 속성 값으로 JS가 와야하고, onclick 속성의 속성 값은 웹브라우저가 기억하고 있다가 onclick 속성이 있는 Tag를 사용자가 클릭했을 때 적혀있는대x 해석해서 웹브라우저가 동작할 것이다.
+            
+            이처럼 웹브라우저 위에서 일어나는 일을 사건(Event)라고 함
+            무수한 사건 중 기념할 만한 사건을 정해 둠
+
+            검색어: (Event종류) event attribute(=속성)
+            e.g.) onclick, onchange, onkeydown 등
+
+        -->
+        <input type="button" value="hi" onclick="alert('hi')">
+        <input type="text" onchange="alert('Text was changed')">
+    </body>
+</html>

@@ -1,0 +1,58 @@
+/*
+    CSS파일을 따로 만듦으로서 코드의 재사용성이 높아짐
+    > 중복의 제거!
+    &
+    웹브라우저에서의 캐시: 파일을 한 번 다운받으면 사용자의 컴퓨터에 저장해두었다가 네트워크를 사용하지 않고 불러오기(=캐싱)  때문에 속도가 더 빨라지고, 사업자들은 돈을 덜 쓰게 됨.
+*/
+#active{
+    color:red;
+}
+.link{
+    text-decoration: underline;
+    color:blue;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+h1{
+    font-size:45px;
+    text-align: center;
+    border-bottom:1px gray solid;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+ol{
+    border-right: 1px gray solid;
+    width: 100px;
+    margin:0;
+    padding:20px;
+}
+body{
+    margin:0;
+}
+#grid{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+}
+#grid ol{
+    padding-left:33px;
+}
+#grid #article{
+    padding-left: 25px;
+}
+/*screensize<=800px일 때*/
+@media(max-width:800px){
+    #grid{
+        display:block;
+    }
+    ol{
+        border-right: none;
+        border-bottom: 1px gray solid;
+        border-top: 1px gray solid;
+        width:100%;
+    }
+    h1{
+        border-bottom: none;
+    }
+}

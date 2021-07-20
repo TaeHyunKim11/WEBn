@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+
+    </head>
+    <body>
+        <h1>Object</h1>
+        <h2>Create</h2>
+        <script>
+            //배열이 순서가 있는 상자라면 객체는 순서가 없는 상자-> 대신 이름을 붙여줌
+            //객체 생성, {}로 묶기
+            var coworkers={
+                "programmer":"egoing",
+                "designer":"leezche"
+            };
+            document.write("programmer : "+coworkers.programmer+'<br>');
+            document.write("designer : "+coworkers.designer+'<br>');
+            coworkers.bookkeeper="duru";
+            document.write("designer : "+coworkers.bookkeeper+"<br>");
+            coworkers["data scientist"]="taeho";//띄어쓰기가 있으면 문법적으로 오류, 따라서 []로 묶어줌
+            document.write("data scientist : "+coworkers["data scientist"]+"<br>");//읽어올 때도 마찬가지
+        </script>
+        
+        <h2>Iterate</h2><!--객체의 데이터 순회-->
+        <script>
+            for(var key in coworkers){//coworkers라는 변수가 가리키는 객체에 있는 key값들을 가져오는 반복문, key값은 programmer, designer and etc
+                //key는 가져오고 싶은 정보에 도달할 수 있는 열쇠, 배열에서는 Index
+                document.write(key+"<br>");
+            }
+            document.write("<br>");
+            for(var key in coworkers){
+                document.write(coworkers[key]+"<br>");
+            }
+            document.write("<br>");
+            for(var key in coworkers){
+                document.write(key+' : '+coworkers[key]+"<br>");
+            }
+        </script>
+        
+        <h2>Property & Methods</h2>
+        <!--객체에 소속된 변수(=프로퍼티)의 값으로 함수를 지정, 객체에 소속된 함수(=메소드)를 만들 수 있다.-->
+        <script>
+            //객체에는 다양한 것을 담을 수 있다.(변수, 객체, 숫자, "함수")
+            coworkers.showAll=function(){
+                //이렇게 했을 때 아쉬운점은 showAll또한 coworkers에 소속된 데이터이므로 이것 또한 출력이 됨. if문으로 showAll은 제외한다는 것을 써주면 되지만 여기서는 그것이 중요하지 않음
+                for(var key in this){ 
+                    document.write(key+' : '+this[key]+"<br>");
+                    // 객체 이름을 위처럼 coworkers라고 하면 객체의 이름이 바뀌었을 때 제대로 가져오지 못할 수 있음. 따라서 this로 변경해 줌
+                }
+            }
+        </script>
+    </body>
+</html>
